@@ -8,9 +8,9 @@ Functions and calculate in tableau
 ![Bitbucket open issues](https://img.shields.io/bitbucket/issues/iuricode/README-template?style=for-the-badge)
 ![Bitbucket open pull requests](https://img.shields.io/bitbucket/pr-raw/iuricode/README-template?style=for-the-badge)
 
-For this project I separated with some parts the first part I used function Look
+For this project I separated with some parts the first part I used function Look -> Superstore file
 
-1 project 1 STEP: To create calculate field
+1 project 1 STEP: To create calculate field 
 
 <table>
   <tr>
@@ -38,8 +38,41 @@ SUM([Vendas])/TOTAL(SUM([Vendas]))
   </tr>
 </table>
 
+1 project 2 STEP: List purchases made in the last days of 2017 and associate them with the total purchases for December 2017.
 
+-> Date need to be in days and discret.(change the configuration click in the date bottom)
+-> Filter the date : Put "data nota fiscal"in filter and choice the date(in this example is december.
 
+```
+LOOKUP (MAX ( [Data da Nota Fiscal]),0)
+Returns the most recent (maximum) invoice date within the current aggregation context
+
+Date Difference
+DATEDIFF( 'day', LOOKUP (MAX [Data da Nota Fiscal] ), 0) ,MAKEDATE (2017, 12, 31) )
+DATEDIFF( 'day',LOOKUP(MAX [Data da Nota Fiscal] ), 0)-> Min
+MAKEDATE (2017, 12, 31) )- > the date which you want to comparate
+
+```
+
+<table>
+  <tr>
+    <td align="center">
+      <a href="#" title="Thales Farias">
+        <img src="3.png" width="500" alt="Tableau's Dashboard"/><br>
+      </a>
+    </td>
+  </tr>
+</table>
+
+<table>
+  <tr>
+    <td align="center">
+      <a href="#" title="Thales Farias">
+        <img src="4.png" width="500" alt="Tableau's Dashboard"/><br>
+      </a>
+    </td>
+  </tr>
+</table>
 
 
 
