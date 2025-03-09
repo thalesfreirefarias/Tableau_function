@@ -21,6 +21,7 @@ For this project I separated with some parts the first part I used function Look
     </td>
   </tr>
 </table>
+
 ```
 TOTAL (SUM([Vendas]))
 SUM([Vendas])/TOTAL(SUM([Vendas]))
