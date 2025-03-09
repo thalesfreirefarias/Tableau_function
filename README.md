@@ -104,6 +104,37 @@ PREVIOUS_VALUE(SUM([Vendas])) * 1.05 starts with a base sales amount and adds 5%
 
 LOOKUP(SUM([Vendas]), -1) * 1.05 starts without any initial value but, from the second value onward, it takes the sales value from the previous row and adds 5%. Each subsequent calculation uses the sales value from the previous row as a reference and adds 5% to it.
 
+1 project 4  STEP— Show the Sales MIN, AVG, MAX from each month
+
+```
+RUNNING_MAX(sum([Vendas])
+RUNNING_AVG(sum([Vendas])
+RUNNING_MIN(sum([Vendas])
+
+```
+<table>
+  <tr>
+    <td align="center">
+      <a href="#" title="Thales Farias">
+        <img src="6.png" width="500" alt="Tableau's Dashboard"/><br>
+      </a>
+    </td>
+  </tr>
+</table>
+
+The last part of this First project I reverse the values of the previous table and put the "valores da medida"in the row and "nomes das medidas"in the color.
+
+
+<table>
+  <tr>
+    <td align="center">
+      <a href="#" title="Thales Farias">
+        <img src="7.png" width="500" alt="Tableau's Dashboard"/><br>
+      </a>
+    </td>
+  </tr>
+</table>
+
 ### Adjustments and improvements.
 
 The project is still under development, and the upcoming updates will focus on the following tasks:
