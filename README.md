@@ -64,6 +64,9 @@ MAKEDATE (2017, 12, 31) )- > the date which you want to comparate
   </tr>
 </table>
 
+```
+Put Look UP MAX in the filter and choose 0-1 filter to show just the last two days of purchases
+```
 <table>
   <tr>
     <td align="center">
@@ -74,10 +77,32 @@ MAKEDATE (2017, 12, 31) )- > the date which you want to comparate
   </tr>
 </table>
 
+```
+The difference between the LOOKUP date and MAX date is that LOOKUP returns a value from a previous or future row based on the offset, while MAX date calculates the most recent date based on the current context of the data.
+```
+
+1 project 3  STEP—> Sales budget from 2017 onwards will always be greater than the previous year's budget.
+
+```
+Sales budget
+LOOKUP (SUM (Vendas), -1) * 1.05
+PREVIOUS_VALUE(sum([Vendas])) * 1.05
+```
 
 
+<table>
+  <tr>
+    <td align="center">
+      <a href="#" title="Thales Farias">
+        <img src="5.png" width="500" alt="Tableau's Dashboard"/><br>
+      </a>
+    </td>
+  </tr>
+</table>
 
+PREVIOUS_VALUE(SUM([Vendas])) * 1.05 starts with a base sales amount and adds 5%, continuing to add 5% to the previous value. This creates a cumulative growth effect over time, making it more suitable for long-term targets.
 
+LOOKUP(SUM([Vendas]), -1) * 1.05 starts without any initial value but, from the second value onward, it takes the sales value from the previous row and adds 5%. Each subsequent calculation uses the sales value from the previous row as a reference and adds 5% to it.
 
 ### Adjustments and improvements.
 
