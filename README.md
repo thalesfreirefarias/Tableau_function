@@ -32,7 +32,7 @@ SUM([Vendas])/TOTAL(SUM([Vendas]))
   <tr>
     <td align="center">
       <a href="#" title="Thales Farias">
-        <img src="Captura de Tela 2025-02-25 às 22.29.49.png" width="500" alt="Tableau's Dashboard"/><br>
+        <img src="2.png" width="500" alt="Tableau's Dashboard"/><br>
       </a>
     </td>
   </tr>
